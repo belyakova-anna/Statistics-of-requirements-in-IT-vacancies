@@ -300,7 +300,7 @@ function updateGraph(category) {
   const graphContainer = d3.select("#graph-container");
   graphContainer.html('<div class="loading">Loading data...</div>');
 
-  d3.json("../data/vacancies.json").then(data => {
+  d3.json("./data/vacancies.json").then(data => {
     d3.select("#experience-bar").selectAll("*").remove();
     d3.select("#work-format-pie").selectAll("*").remove();
     d3.select("#job-names-list").selectAll("*").remove();

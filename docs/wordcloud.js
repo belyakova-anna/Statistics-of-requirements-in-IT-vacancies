@@ -22,7 +22,7 @@ function measureText(text, fontSize = 16) {
   return width;
 }
 
-d3.json("../data/vacancies.json").then(data => {
+d3.json("./data/vacancies.json").then(data => {
   const entries = Object.entries(data.top_key_skills);
 
   const counts = entries.map(([_, count]) => count);

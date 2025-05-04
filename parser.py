@@ -10,7 +10,7 @@ def clean_spaces(text):
     return text
 
 # Function to save the mapping of role IDs to professional role names
-def save_professional_roles_mapping(output_file="data/professional_roles.csv", role_ids=None):
+def save_professional_roles_mapping(output_file="docs/data/professional_roles.csv", role_ids=None):
     url = "https://api.hh.ru/professional_roles"
     headers = {
         "User-Agent": "MyApp/1.0 (my-app-feedback@example.com)",
@@ -50,7 +50,7 @@ def save_professional_roles_mapping(output_file="data/professional_roles.csv", r
     print(f"Professional role mapping saved to {output_file}")
 
 # Main function to parse job vacancies
-def parse_vacancies(output_file="data/vacancies.csv"):
+def parse_vacancies(output_file="docs/data/vacancies.csv"):
     url = "https://api.hh.ru/vacancies"
     headers = {
         "User-Agent": "api-test-agent"
@@ -62,7 +62,7 @@ def parse_vacancies(output_file="data/vacancies.csv"):
     ]
 
     # Save the list of professional roles to CSV
-    save_professional_roles_mapping("data/professional_roles.csv", professional_role_ids)
+    save_professional_roles_mapping("docs/data/professional_roles.csv", professional_role_ids)
 
     params = {
         "area": 88,

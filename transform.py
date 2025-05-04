@@ -20,11 +20,11 @@ def get_category(spec_id):
     return None
 
 # Function to load data from a CSV file
-def load_data(path="data/vacancies.csv"):
+def load_data(path="docs/data/vacancies.csv"):
     return pd.read_csv(path)
 
 # Function to prepare the data for D3 visualization and save it as a JSON file
-def prepare_for_d3(df, out_path="data/vacancies.json", roles_path="data/professional_roles.csv"):
+def prepare_for_d3(df, out_path="docs/data/vacancies.json", roles_path="docs/data/professional_roles.csv"):
     # Convert specialization_id to numeric
     df = df.assign(specialization_id=pd.to_numeric(df["specialization_id"], errors="coerce").astype("Int64"))
 

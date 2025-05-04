@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Cloud of English Requirements</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-cloud/build/d3.layout.cloud.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h2>Top 20 Common Requirements for IT Specialist Skills</h2>
+  <div id="wordcloud"></div>
+  <div class="full-width-banner">
+    <h2>Explore our statistics and build your dream career in IT!</h2>
+    <p>
+      <strong>Resource:</strong> <a href="https://hh.ru" target="_blank" class="custom-link">hh.ru</a> – the most popular website for job search in the Russian Federation<br>
+      <strong>Place of work:</strong> Kazan, Tatarstan
+    </p>
+  </div> 
+
+  <div class="button-bar">
+    <button data-category="Analytics and Data">Analytics and Data</button>
+    <button data-category="Design and Creative">Design and Creative</button>
+    <button data-category="Management and Leadership">Management and Leadership</button>
+    <button data-category="Engineering and Infrastructure">Engineering and Infrastructure</button>
+    <button data-category="Testing and Documentation">Testing and Documentation</button>
+    <button data-category="Methodology">Methodology</button>
+  </div>
+
+  <div class="graphs-container">
+    <h2 id="graphs-title" class="graphs-title">Заголовок раздела</h2>
+    <div class="graphs-layout">
+      <div class="left-panel">
+        <div class="scatter-chart-title"></div>
+        <svg id="experience-bar"></svg>
+      </div>
+
+      <div class="right-panel">
+        <div class="pie-chart-container">
+          <div class="pie-chart-title">Work Formats</div>
+          <div class="pie-chart-row">
+            <svg id="work-format-pie"></svg>
+            <div id="pie-legend" class="pie-legend"></div>
+          </div>
+        </div>
+        
+        <div class="job-names-container">
+          <h3>Job Titles</h3>
+          <ul id="job-names-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="wordcloud.js"></script>
+  <script src="experienceplot.js"></script>
+</body>
+</html>
